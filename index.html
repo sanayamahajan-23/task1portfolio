@@ -3,88 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Your Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-    
-    header {
-      background-color: #333;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .project {
-      border: 1px solid #ddd;
-      padding: 20px;
-      background-color: white;
-    }
-
-    .project h3 {
-      font-size: 20px;
-      margin-bottom: 5px;
-    }
-
-    .project p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Web Developer & Designer</p>
-  </header>
-  
-  <div class="container">
-    <div class="section">
-      <h2>About Me</h2>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>Web Developer & Designer</p>
       <p>Write a brief introduction about yourself here.</p>
     </div>
-    
-    <div class="section">
+  </section>
+
+  <section id="projects">
+    <div class="container">
       <h2>Projects</h2>
-      <div class="project">
-        <h3>Project 1</h3>
-        <p>Description of project 1.</p>
-      </div>
-      <div class="project">
-        <h3>Project 2</h3>
-        <p>Description of project 2.</p>
+      <div class="project-grid">
+        <div class="project">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>Description of project 2.</p>
+        </div>
+        <!-- Add more projects here -->
       </div>
     </div>
-  </div>
+  </section>
 
   <footer>
     <p>&copy; 2023 Your Portfolio. All rights reserved.</p>

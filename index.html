@@ -1,46 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  <title>Sanaya Mahajan-Portfolio</title>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <div class="container">
-      <h1>Your Name</h1>
-      <p>Web Developer & Designer</p>
-      <p>Write a brief introduction about yourself here.</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>Project 1</h3>
-          <p>Description of project 1.</p>
-        </div>
-        <div class="project">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Project 2</h3>
-          <p>Description of project 2.</p>
-        </div>
-        <!-- Add more projects here -->
+  <header>
+    <nav>
+      <div class="left">Sanaya's Portfolio</div>
+      <div class="right">
+        <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/">About Me</a></li>
+         <li><a href="/">Skills</a></li>
+         <li><a href="/">Education</a></li>
+         <li><a href="/">Projects</a></li>
+         <li><a href="/">Contact Me</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
+  <main>
+    <section class="firstSec">
+      <div class="leftSec"> Hi, I'm <span class="colorchange">Sanaya Mahajan</span>,
+        <div class="profession">
+          <span class="profession-change">passionate web developer</span>,
+          <span class="profession-change">graphic designer</span>, and
+          <span class="profession-change">fervent singer</span>
+          driven by unwavering passion.
+        </div>
+      </div>
+      <div class="rightSec"><div class="image-container">
+        <img src="./images/pic.png" alt="developer image">
+      </div></div>
+    </section>
+    <hr>
+    <section class="secondSec">
+      <h1>About Me</h1><span class="text-gray">Who Am I?</span>
+    </section>
+  </main>
 
+  
+ 
   <footer>
     <p>&copy; 2023 Your Portfolio. All rights reserved.</p>
   </footer>

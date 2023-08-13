@@ -302,10 +302,10 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.progress {
+ .progress {
   height: 100%;
   border-radius: 10px;
-  animation: progressBarAnimation 3s linear forwards;
+  animation: progressBarAnimation 10s linear forwards infinite ,progressbarPause 10s 1,progressBarRepeat 10s  ;
 }
 
 @keyframes progressBarAnimation {
@@ -317,6 +317,17 @@ body {
   100% {
     width: 90%; /* Example: 90% for a skill level of 90 */
     background: linear-gradient(to right, #2c7da0ff, #89c2d9ff);
+  }
+}
+@keyframes progressBarPause{
+  0%, 100% {
+    width: 80%;
+  }
+}
+@keyframes progressBarRepeat {
+  0%, 100% {
+    /* This step is optional. You can adjust the width value if needed. */
+    width: 80%;
   }
 }
   /* Horizontal Rule */

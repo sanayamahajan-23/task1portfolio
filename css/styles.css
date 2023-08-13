@@ -11,11 +11,13 @@
 --sky-blue: #89c2d9ff;
 --light-blue: #a9d6e5ff;
 */
-
+html,body{
+  scroll-behavior: smooth;
+}
 body {
     background-color: #013a63ff ;
     color: #e9e7e7 ;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -58,25 +60,52 @@ body {
   .left {
     font-size: 1.5rem;
   }
-  
-  /* Sections */
-  /*first section*/
-  .firstSec {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 70px 0 -5px;
-  }
-  
-  .leftSec {
-    flex: 1;
-    font-size: 2rem;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1.5s forwards;
-  }
+/* Sections */
+/* First section */
+.firstSec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 0 -10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.rightSec {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Adjust this to move the image to the right end */
+  align-items: flex-end; /* Align items at the bottom */
+}
+
+.image-container {
+  max-width: 100%; /* Extend the image container */
+  width: 70%; /* Set the width to 100% */
+  height:70%;/*et the height to 100% */
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align the image to the right end */
+}
+
+.image-container img {
+  width: 100%; /* Set the width to 100% */
+  height: 100%; /* Set the height to 100% */
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.leftSec {
+  flex: 1;
+  font-size: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards;
+}
+
   .colorchange {
     color:  #2c7da0ff;
   }
@@ -106,40 +135,190 @@ body {
       opacity: 1;
     }
   }
-  .rightSec {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-   
-  }
-  .image-container {
-    max-width: calc(100% - 10px); /* Subtract padding */
-  }
-  .image-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
   
-  /*second section*/
-  .secondSec {
-    max-width: 100vw;
-    margin: 0;
-    background: #00B4D8;
-    text-align: center;
-    padding: 10px;
-    height:80vh;
+/* About Me section */
+
+.secondSec {
+  background-image: url('./images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #01497cff;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.secondSec .about-me-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+.secondSec h1 {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  margin: 0;
+}
+
+.secondSec h1 {
+  margin-bottom: 10px;
+}
+
+.text-gray {
+  color: #ccc;
+  display: block;
+  margin-top: 10px;
+}
+
+
+.about-me-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+.about-me-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: left;
+}
+
+.image-container img {
+  max-width: 100%; /* Adjust image width */
+  height:auto;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.about-me-text {
+  padding-left: 20px;
+}
+
+.about-me-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about-me-text .text-gray {
+  color: #ccc;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 10px;
+}
+
+.about-me-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* Animation */
+.about-me-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .secondSec h1{
-    font-size: 1.9rem;
-    padding:0;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .text-gray{
-    color:grey;
+}
+/*third section*/
+/* Skills section */
+/* Skills section */
+.skillsSec {
+  background-color: #2a6f97ff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.skills-category {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSlideUp 1.5s forwards;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 18px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  animation: progressBarAnimation 3s linear forwards;
+}
+
+@keyframes progressBarAnimation {
+  0% {
+    width: 0;
+    background: linear-gradient(to right, #2c7da0ff, #89c2d9ff);
+  }
+  /* Adjust the percentages here to match the skill levels */
+  100% {
+    width: 90%; /* Example: 90% for a skill level of 90 */
+    background: linear-gradient(to right, #2c7da0ff, #89c2d9ff);
+  }
+}
   /* Horizontal Rule */
   hr {
     border: 0;
@@ -150,10 +329,46 @@ body {
   
   /* Footer */
   footer {
+    background-color: #89c2d9ff;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
-    padding: 20px 0;
-    background-color: #a9d6e5ff;
   }
+  
+  .social-icons {
+    margin-bottom: 5px;
+  }
+  /* Individual social icon link */
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color:rgb(122, 141, 148);
+  transition: color 0.3s;
+}
+
+  
+  /* Social icon image */
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s, filter 0.3s;
+}
+  
+  /* Hover effect for social icon */
+.social-icons a:hover {
+  color:#61a5c2ff; /* Change to your preferred hover color */
+}
+
+/* Enlarged social icon on hover */
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+  
+  p {
+    font-size: 14px;
+  }
+  
   
   @media screen and (max-width: 1200px) {
     /* Adjustments for medium screens */
@@ -198,4 +413,53 @@ body {
       width: 30%;
     }
   }
+  /*fancier code*/
+  body {
+    background-color: #013a63ff;
+    color: #e9e7e7;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
   
+  /* Add some fancy font styles */
+  h1, h2, h3 {
+    font-family:'Caveat',cursive;
+    font-size: larger;
+  }
+  
+  h1 {
+    font-size: 10rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .text-gray {
+    color: #ccc;
+  }
+  
+  /* Add some fancy styles for links */
+  a {
+    text-decoration: none;
+    color: #61a5c2ff;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #468fafff;
+  }
